@@ -2,8 +2,8 @@
   "name": "reactapp",
   "version": "0.1.0",
   "private": true,
-  "engines":{
-    "node":"12.13.0",
+   "engines":{
+    "node":"12.13.1",
     "npm":"6.x",
     "yarn":"1.x"
   },

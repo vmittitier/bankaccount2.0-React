@@ -27,7 +27,7 @@ class ListAccount extends Component {
 
     render() {
         return <div>
-            <h1 className="page-title">Listagem de Contas</h1>
+            <h1 className="page-title">Account Dashboard</h1>
 
             <table className="table">
                 <thead>
@@ -62,7 +62,7 @@ class ListAccount extends Component {
             </table>
 
             <div className="float-right">
-                <Link to="/account/new" className="btn btn-primary">Nova Conta</Link>
+                <Link to="/account/new" className="btn btn-primary">New Account</Link>
             </div>
         </div>;
     }

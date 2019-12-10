@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -13,6 +14,7 @@ import Withdraw from './pages/bankAccounts/Withdraw';
 import Deposit from './pages/bankAccounts/Deposit';
 
  const App = () => 
+
  <div className="container">
     <BrowserRouter>
             <Switch>

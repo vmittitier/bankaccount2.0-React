@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import httpClient from "../../utils/httpClient";
 
 class ListAccount extends Component {
@@ -43,15 +43,15 @@ class ListAccount extends Component {
                         <td>{account.balance}</td>
                         <td>{account.accLimit}</td>
                         <td>
-                        <NavLink to={`/account/deposit/${account.accNumber}`} className="btn btn-sm btn-primary">
+                        <Link to={`/account/deposit/${account.accNumber}`} className="btn btn-sm btn-primary">
                                 Deposit
-                        </NavLink>&nbsp;
-                        <NavLink to={`/account/withdraw/${account.accNumber}`} className="btn btn-sm btn-primary">
+                        </Link>&nbsp;
+                        <Link to={`/account/withdraw/${account.accNumber}`} className="btn btn-sm btn-primary">
                                 Withdraw
-                        </NavLink>&nbsp;                            
-                        <NavLink to={`/account/edit/${account.accNumber}`} className="btn btn-sm btn-secondary">
+                        </Link>&nbsp;                            
+                        <Link to={`/account/edit/${account.accNumber}`} className="btn btn-sm btn-secondary">
                                 Set Limit
-                        </NavLink>&nbsp;
+                        </Link>&nbsp;
                         <button className="btn btn-sm btn-danger" onClick={() => this.handleRemove(account.accNumber)}>
                                 Remove
                         </button>&nbsp;
@@ -62,7 +62,7 @@ class ListAccount extends Component {
             </table>
 
             <div className="float-right">
-                <NavLink to="/account/new" className="btn btn-primary">Nova Conta</NavLink>
+                <Link to="/account/new" className="btn btn-primary">Nova Conta</Link>
             </div>
         </div>;
     }

@@ -1,4 +1,4 @@
-# React Bank  
+# React Bank :smile:
 
   
 That application is a CRUD for a bank account which are built with two API's and can be found at:

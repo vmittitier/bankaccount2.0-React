@@ -43,12 +43,19 @@ class ListAccount extends Component {
                         <td>{account.balance}</td>
                         <td>{account.accLimit}</td>
                         <td>
-                            <button className="btn btn-sm btn-danger" onClick={() => this.handleRemove(account.accNumber)}>
-                                Remover
+                        <NavLink to={`/account/deposit/${account.accNumber}`} className="btn btn-sm btn-primary">
+                                Deposit
+                        </NavLink>&nbsp;
+                        <NavLink to={`/account/withdraw/${account.accNumber}`} className="btn btn-sm btn-primary">
+                                Withdraw
+                        </NavLink>&nbsp;                            
+                        <NavLink to={`/account/edit/${account.accNumber}`} className="btn btn-sm btn-secondary">
+                                Set Limit
+                        </NavLink>&nbsp;
+                        <button className="btn btn-sm btn-danger" onClick={() => this.handleRemove(account.accNumber)}>
+                                Remove
                         </button>&nbsp;
-                        <NavLink to={`/account/edit/${account.accNumber}`} className="btn btn-sm btn-primary">
-                                Alterar Limite
-                        </NavLink>
+                       
                         </td>
                     </tr>)}
                 </tbody>

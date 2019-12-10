@@ -7,7 +7,7 @@ import httpClient from "../../utils/httpClient";
 class EditAccount extends Component {
     state = {
         account: {
-            accLimit: ""
+            depositValue: ""
         },
         errors: {}
     };
@@ -46,7 +46,7 @@ class EditAccount extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
 
-        httpClient.put(`/account/${this.retrieveAccNumber()}`, this.state.account)
+        httpClient.put(`/account/deposit/${this.retrieveAccNumber()}`, this.state.account)
             .then(() => this.props.history.push("/"))
             .catch(({ response }) => {
                 if (response.status === 400) {
@@ -61,19 +61,19 @@ class EditAccount extends Component {
         const { account, errors } = this.state;
 
         return <div>
-            <h1 className="page-accNumber">Alterar Limite de Conta</h1>
+            <h1 className="page-accNumber">Enter the deposit value.</h1>
 
             <form onSubmit={this.handleSubmit}>
 
-                <Field name="accLimit"
-                    label="Account Limit"
-                    value={account.accLimit}
-                    errors={errors["accLimit"]}
+                <Field name="depositValue"
+                    label="Deposit"
+                    value={account.depositValue}
+                    errors={errors["depositValue"]}
                     onChange={this.handleChange} />
 
                 <div className="float-right btn-group">
-                    <NavLink to="/" className="btn btn-primary">Voltar</NavLink>
-                    <button type="submit" className="btn btn-success">Salvar</button>
+                    <NavLink to="/" className="btn btn-primary">Back</NavLink>
+                    <button type="submit" className="btn btn-success">Save</button>
                 </div>
             </form>
         </div>

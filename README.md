@@ -11,11 +11,8 @@ https://react-bank.netlify.com/
 
 
 * Frontend API:  
-
- Mainly IDE: Visual Studio Code  
-
+ Mainly IDE: Visual Studio Code 
  Framework: REACT  
- 
  DOM: NODE.js as JavaScript Engine  
  Style: Bootstrap  
   

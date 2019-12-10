@@ -1,16 +1,13 @@
 import React, { Component } from "react";
 
-import axios from "../utils/httpClient";
-
-import Field from "../components/Field"
+import axios from "../../utils/httpClient";
+import Field from "../../components/Field";
 import { NavLink } from "react-router-dom";
 
 class NewAccount extends Component {
     state = {
         account: {
-            id: "",
-            balance: "",
-            accLimit: ""
+            balance: ""
         },
         errors: {},
         globalError: ""
@@ -29,8 +26,8 @@ class NewAccount extends Component {
     };
 
     handleSubmit = (event) => {
-        axios.post("/accounts", this.state.account)
-            .then(() => this.props.history.push("/"))
+        axios.post("/account", this.state.account)
+            .then(() => this.props.history.push("/account"))
             .catch(({ response }) => {
                 if (response.status === 400) {
                     this.setState({
@@ -58,23 +55,12 @@ class NewAccount extends Component {
                 </div> : <></>}
 
                 <form onSubmit={this.handleSubmit}>
-                    <Field name="id"
-                           label="ID"
-                           value={account.id}
-                           errors={errors["id"]}
-                           onChange={this.handleChange}/>
 
                     <Field name="balance"
-                           label="Balance"
-                           value={account.balance}
-                           errors={errors["balance"]}
-                           onChange={this.handleChange}/>
-
-                    <Field name="accLimit"
-                           label="Account Limit"
-                           value={account.accLimit}
-                           errors={errors["accLimit"]}
-                           onChange={this.handleChange}/>
+                        label="Balance"
+                        value={account.balance}
+                        errors={errors["balance"]}
+                        onChange={this.handleChange} />
 
                     <div className="float-right btn-group">
                         <NavLink to="/" className="btn btn-primary">Voltar</NavLink>

@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ListAccount from 'src/components/ListAccount';
+import App from './App'
 
-ReactDOM.render(<ListAccount />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

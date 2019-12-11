@@ -26,6 +26,8 @@ import Deposit from './pages/bankAccounts/Deposit';
                 <Route path="*" component={NotFound}/>
             </Switch>
         </BrowserRouter>
+        
  </div>
+
 
 export default App;

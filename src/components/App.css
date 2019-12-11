@@ -1,3 +1,56 @@
-.page-title {
-    margin: 50px 0;
+.body{
+margin: 40px 0;
+background-color: rgb(36, 36, 36);
 }
+
+.page-title {
+    margin: 0px 0;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    color: #8d8a8a;
+    font-family: 'Segoe UI';
+    font-size: 18px;
+    letter-spacing: 4px;
+    float: right!important;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.2s ease;
+    background-color: rgb(53, 54, 65);
+    animation: blink 1s linear infinite;       
+}
+
+.td-btm{
+    
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: rgb(22, 33, 155);
+}
+
+.img-fmt {
+    width: 60px;
+    height: 60px;
+    margin:-30px 0 0 -30px;
+    -webkit-animation:spin 8s linear infinite;
+    -moz-animation:spin 8slinear infinite;
+    animation:spin 8s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.lt-grey{
+    color: #8d8a8a;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Segoe UI';
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+@keyframes blink{
+    0%{opacity: 0.7;}
+    50%{opacity: 1;}
+    100%{opacity: 0.7;}
+    }
+
+

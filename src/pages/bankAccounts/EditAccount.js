@@ -61,21 +61,32 @@ class EditAccount extends Component {
         const { account, errors } = this.state;
 
         return <div>
-            <h1 className="page-accNumber">Alterar Limite de Conta</h1>
+            <h1 className="page-title">Set Account Limit</h1>
+            <table className="table bg-white">
+                <thead className="text-center">
+                    <tr>
 
-            <form onSubmit={this.handleSubmit}>
+                    </tr>
+                </thead>
+                <tbody className="">
+                    <tr><td>
+                        <form onSubmit={this.handleSubmit}>
 
-                <Field name="accLimit"
-                    label="Account Limit"
-                    value={account.accLimit}
-                    errors={errors["accLimit"]}
-                    onChange={this.handleChange} />
+                            <Field name="accLimit"
+                                label="New Value"
+                                value={account.accLimit}
+                                errors={errors["accLimit"]}
+                                onChange={this.handleChange} />
 
-                <div className="float-right btn-group">
-                    <Link to="/" className="btn btn-primary">Voltar</Link>
-                    <button type="submit" className="btn btn-success">Salvar</button>
-                </div>
-            </form>
+                            <div className="float-right btn-group">
+                                <Link to="/" className="btn btn-primary">Voltar</Link>
+                                <button type="submit" className="btn btn-success">Salvar</button>
+                            </div>
+
+                        </form>
+                    </td></tr>
+                </tbody>
+            </table>
         </div>
     }
 }

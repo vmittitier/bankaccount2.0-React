@@ -48,25 +48,36 @@ class NewAccount extends Component {
         const { account, errors, globalError } = this.state;
         return (
             <div>
-                <h1 className="page-id">Novo Account</h1>
+                <h1 className="page-title">NEW ACCOUNT</h1>
 
                 {globalError ? <div className="alert alert-danger">
                     {globalError}
                 </div> : <></>}
+                <table className="table bg-white">
+                <thead className="text-center">
+                    <tr>
 
+                    </tr>
+                </thead>
+                <tbody className="">
+                    <tr><td>
                 <form onSubmit={this.handleSubmit}>
 
                     <Field name="balance"
-                        label="Balance"
+                        label="In order to create a new account, just set the balance initial value below:"
                         value={account.balance}
                         errors={errors["balance"]}
                         onChange={this.handleChange} />
 
                     <div className="float-right btn-group">
-                        <Link to="/" className="btn btn-primary">Voltar</Link>
-                        <button type="submit" className="btn btn-success">Salvar</button>
+                        <Link to="/" className="btn badge btn-outline-white">Back</Link>
+                        <button type="submit" className="btn badge btn-outline-success">Create</button>
                     </div>
                 </form>
+                </td>
+                    </tr>
+                </tbody>
+            </table>
             </div>
         );
     }

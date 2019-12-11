@@ -61,21 +61,32 @@ class EditAccount extends Component {
         const { account, errors } = this.state;
 
         return <div>
-            <h1 className="page-accNumber">Enter the withdraw value.</h1>
+            <h1 className="page-title ">WITHDRAW</h1>
+            <table className="table bg-white">
+                <thead className="text-center">
+                    <tr>
 
-            <form onSubmit={this.handleSubmit}>
+                    </tr>
+                </thead>
+                <tbody className="">
+                    <tr><td>
+                        <form onSubmit={this.handleSubmit}>
 
-                <Field name="withdrawValue"
-                    label="Withdraw"
-                    value={account.withdrawValue}
-                    errors={errors["withdrawValue"]}
-                    onChange={this.handleChange} />
+                            <Field name="withdrawValue"
+                                label="Please, insert the amount to withdraw:"
+                                value={account.withdrawValue}
+                                errors={errors["withdrawValue"]}
+                                onChange={this.handleChange} />
 
-                <div className="float-right btn-group">
-                    <Link to="/" className="btn btn-primary">Back</Link>
-                    <button type="submit" className="btn btn-success">Save</button>
-                </div>
-            </form>
+                            <div className="float-right btn-group">
+                                <Link to="/" className="btn badge btn-outline-white">Back</Link>
+                                <button type="submit" className="btn badge btn-outline-success">Withdraw</button>
+                            </div>
+                        </form>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     }
 }

@@ -60,8 +60,8 @@ class EditAccount extends Component {
     render() {
         const { account, errors } = this.state;
 
-        return <div>
-            <h1 className="page-title">Set Account Limit</h1>
+        return <div >
+            <h1 className="page-title">ACCOUNT LIMIT</h1>
             <table className="table bg-white">
                 <thead className="text-center">
                     <tr>
@@ -73,14 +73,14 @@ class EditAccount extends Component {
                         <form onSubmit={this.handleSubmit}>
 
                             <Field name="accLimit"
-                                label="New Value"
+                                label="Please, insert the new account limit:"
                                 value={account.accLimit}
                                 errors={errors["accLimit"]}
                                 onChange={this.handleChange} />
 
                             <div className="float-right btn-group">
-                                <Link to="/" className="btn btn-primary">Voltar</Link>
-                                <button type="submit" className="btn btn-success">Salvar</button>
+                                <Link to="/" className="btn badge btn-outline-white">Back</Link>
+                                <button type="submit" className="btn badge btn-outline-success">Update</button>
                             </div>
 
                         </form>

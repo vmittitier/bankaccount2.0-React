@@ -15,7 +15,7 @@ import Deposit from './pages/bankAccounts/Deposit';
 
  const App = () => 
 
- <div className="container">
+ <div className="container-sm">
     <BrowserRouter>
             <Switch>
                 <Route path={["/", "/account"]} exact component={ListAccount}/>

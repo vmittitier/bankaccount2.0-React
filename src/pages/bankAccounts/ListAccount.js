@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import httpClient from "../../utils/httpClient";
 
-// import Logo from '../../components/inv.png';
-
 class ListAccount extends Component {
     state = {
         account: []
@@ -29,9 +27,6 @@ class ListAccount extends Component {
 
     render() {
         return <div>
-            {/* <div>
-            <img src={Logo} className="img-fmt" alt="Invillia"/>
-            </div> */}
             
             <h1 className="page-title ">BANK ACCOUNT DASHBOARD</h1>            
             
